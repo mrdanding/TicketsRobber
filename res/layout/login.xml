@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/userNameLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="34dp"
+        android:layout_y="81dp"
+        android:text="用户名：" />
+
+    <TextView
+        android:id="@+id/passwordLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="41dp"
+        android:layout_y="142dp"
+        android:text="密码：" />
+
+    <EditText
+        android:id="@+id/userNameField"
+        android:layout_width="144dp"
+        android:layout_height="wrap_content"
+        android:layout_x="126dp"
+        android:layout_y="66dp"
+        android:ems="10" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/passwordField"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_x="124dp"
+        android:layout_y="132dp"
+        android:ems="10"
+        android:inputType="textPassword" />
+
+    <EditText
+        android:id="@+id/verifyCodeField"
+        android:layout_width="148dp"
+        android:layout_height="wrap_content"
+        android:layout_x="130dp"
+        android:layout_y="201dp"
+        android:ems="10" />
+
+    <TextView
+        android:id="@+id/verifyCodeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="35dp"
+        android:layout_y="210dp"
+        android:text="验证码:" />
+
+    <Button
+        android:id="@+id/rob"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="118dp"
+        android:layout_y="362dp"
+        android:text="抢票" />
+
+</AbsoluteLayout>
