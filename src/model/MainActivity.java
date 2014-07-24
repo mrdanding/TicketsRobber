@@ -1,4 +1,6 @@
-package com.example.ticketsrobber;
+package model;
+
+import com.example.ticketsrobber.R;
 
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -10,7 +12,7 @@ public class MainActivity extends ActionBarActivity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.login);
+		setContentView(R.layout.search);
 	}
 
 	@Override
