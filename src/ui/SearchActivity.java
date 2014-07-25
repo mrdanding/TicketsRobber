@@ -6,6 +6,7 @@ import android.support.v7.app.ActionBarActivity;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -43,6 +44,16 @@ public class SearchActivity extends ActionBarActivity {
 			return true;
 		}
 		return super.onOptionsItemSelected(item);
+	}
+	
+	@Override
+	public boolean onKeyDown(int keyCode, KeyEvent event){
+		if(keyCode == KeyEvent.KEYCODE_BACK && event.getRepeatCount() == 0){
+			Intent intent = new Intent();
+			intent.setClass(SearchActivity.this, LoginActivity.class);
+			startActivity(intent);
+		}
+		return super.onKeyDown(keyCode, event);
 	}
 	
 	class RobTicketButtonListener implements OnClickListener{

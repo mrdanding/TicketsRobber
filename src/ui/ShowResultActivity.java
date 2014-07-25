@@ -5,6 +5,7 @@ import com.example.ticketsrobber.R;
 import android.support.v7.app.ActionBarActivity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -14,7 +15,6 @@ import android.widget.TextView;;
 
 
 public class ShowResultActivity extends ActionBarActivity {
-
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -45,4 +45,13 @@ public class ShowResultActivity extends ActionBarActivity {
 		return super.onOptionsItemSelected(item);
 	}
 	
+	@Override
+	public boolean onKeyDown(int keyCode, KeyEvent event){
+		if(keyCode == KeyEvent.KEYCODE_BACK && event.getRepeatCount() == 0){
+			Intent intent = new Intent();
+			intent.setClass(ShowResultActivity.this, SearchActivity.class);
+			startActivity(intent);
+		}
+		return super.onKeyDown(keyCode, event);
+	}
 }
