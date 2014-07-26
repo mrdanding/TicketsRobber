@@ -73,13 +73,47 @@
     <Space
         android:layout_width="1dp"
         android:layout_height="15dp"
-        android:layout_row="6" />
+        android:layout_row="8" />
 
     <Button
         android:id="@+id/robTicketButton"
         android:layout_column="3"
         android:layout_gravity="left|top"
-        android:layout_row="7"
+        android:layout_row="8"
         android:text="抢票" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup1"
+        android:layout_column="3"
+        android:layout_gravity="center_horizontal|top"
+        android:layout_row="6" >
+
+        <RadioButton
+            android:id="@+id/radio0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="RadioButton" />
+
+        <RadioButton
+            android:id="@+id/radio1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RadioButton" />
+
+        <RadioButton
+            android:id="@+id/radio2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RadioButton" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/passanger"
+        android:layout_column="0"
+        android:layout_gravity="center"
+        android:layout_row="6"
+        android:text="乘车人："
+        android:textAppearance="?android:attr/textAppearanceLarge" />
 
 </GridLayout>

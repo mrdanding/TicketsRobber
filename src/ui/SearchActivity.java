@@ -1,5 +1,7 @@
 package ui;
 
+import java.util.Date;
+
 import com.example.ticketsrobber.R;
 
 import android.support.v7.app.ActionBarActivity;
@@ -12,11 +14,13 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.CalendarView;
 import android.widget.EditText;
 
 public class SearchActivity extends ActionBarActivity {
 	private Button robTicketButton = null;
-	ProgressDialog progressDialog = null;
+	private ProgressDialog progressDialog = null;
+	private CalendarView calendar = null;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +29,8 @@ public class SearchActivity extends ActionBarActivity {
 		
 		robTicketButton = (Button)findViewById(R.id.robTicketButton);
 		robTicketButton.setOnClickListener(new RobTicketButtonListener());
+		
+		calendar = (CalendarView)findViewById(R.id.departureDateField);
 	}
 
 	@Override
@@ -60,8 +66,18 @@ public class SearchActivity extends ActionBarActivity {
 		public void onClick(View view){
 			Intent intent = new Intent();
 			intent.setClass(SearchActivity.this, ShowResultActivity.class);
+			
+			Date date = new Date(calendar.getDate());
+			System.out.println(date.getYear()+1900);
+			System.out.println(date.getMonth() + 1);
+			System.out.println(date.getDate());
+
 			intent.putExtra("departureField", ((EditText)findViewById(R.id.departureField)).getText().toString());
+			intent.putExtra("departureDateField", ((CalendarView)findViewById(R.id.departureDateField)).getDate());
+			
 			SearchActivity.this.startActivity(intent);
+			
+			
 			//创建ProgressDialog对象  
             progressDialog = new ProgressDialog(SearchActivity.this);  
             // 设置进度条风格，风格为圆形，旋转的  

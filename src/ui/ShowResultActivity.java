@@ -22,8 +22,11 @@ public class ShowResultActivity extends ActionBarActivity {
 		
 		Intent intent = getIntent();
 		String s = intent.getStringExtra("departureField");
-		System.out.println(s+"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
 		((TextView)findViewById(R.id.departureResult)).setText(s);
+		
+		String ss = intent.getStringExtra("departureDateField");
+		System.out.println("!!!!" + ss + "~~~~~~~~");
+		((TextView)findViewById(R.id.date)).setText(intent.getStringExtra("departureDateField"));
 	}
 
 	@Override
