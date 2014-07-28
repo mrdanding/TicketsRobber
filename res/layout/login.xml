@@ -25,6 +25,7 @@
         android:layout_height="wrap_content"
         android:layout_x="126dp"
         android:layout_y="66dp"
+        android:text="neostream"
         android:ems="10" >
 
         <requestFocus />
@@ -37,6 +38,7 @@
         android:layout_x="124dp"
         android:layout_y="132dp"
         android:ems="10"
+        android:text="19361"
         android:inputType="textPassword" />
 
     <EditText
@@ -59,8 +61,26 @@
         android:id="@+id/loginButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_x="118dp"
-        android:layout_y="362dp"
+        android:layout_x="122dp"
+        android:layout_y="342dp"
         android:text="登陆" />
+
+    <ImageView
+        android:id="@+id/loginCaptcha"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_x="42dp"
+        android:layout_y="262dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/default_captcha" />
+
+    <Button
+        android:id="@+id/loginRefresh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="214dp"
+        android:layout_y="256dp"
+        android:onClick="doLoginRefresh"
+        android:text="刷新" />
 
 </AbsoluteLayout>
