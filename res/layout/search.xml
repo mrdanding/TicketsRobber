@@ -5,7 +5,7 @@
     android:layout_height="wrap_content"
     android:columnCount="4"
     android:orientation="horizontal" 
-    android:background="@drawable/bg4">
+    >
 
     <TextView
         android:id="@+id/destination"
@@ -90,7 +90,8 @@
         android:layout_column="3"
         android:layout_gravity="left|top"
         android:layout_row="6"
-        android:ems="10" />
+        android:ems="10" 
+        android:text="刘世俊"/>
 
     <Button
         android:id="@+id/robTicketButton"
