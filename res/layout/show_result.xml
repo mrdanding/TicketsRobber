@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_height="match_parent"
+    android:background="@drawable/bg4" >
 
     <ImageView
         android:id="@+id/bookCaptcha"
@@ -11,15 +12,6 @@
         android:layout_height="40dp"
         android:scaleType="fitXY"
         android:src="@drawable/default_captcha" />
-
-    <Button
-        android:id="@+id/bookRefresh"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_x="210dp"
-        android:layout_y="22dp"
-        android:onClick="doBookRefresh"
-        android:text="刷新" />
 
     <EditText
         android:id="@+id/bookCaptchaInput"
@@ -33,12 +25,23 @@
     </EditText>
 
     <Button
+        android:id="@+id/bookRefresh"
+        android:layout_width="54dp"
+        android:layout_height="58dp"
+        android:layout_x="216dp"
+        android:layout_y="15dp"
+        android:background="@drawable/refresh"
+        android:onClick="doBookRefresh"
+        android:text="" />
+
+    <Button
         android:id="@+id/btnSubmit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_x="121dp"
-        android:layout_y="173dp"
-        android:text="提交"
-        android:onClick="doSubmit" />
+        android:layout_x="70dp"
+        android:layout_y="122dp"
+        android:background="@drawable/submit"
+        android:onClick="doSubmit"
+        android:text="提交" />
 
 </AbsoluteLayout>

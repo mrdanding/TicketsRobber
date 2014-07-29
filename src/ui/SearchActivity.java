@@ -70,7 +70,7 @@ public class SearchActivity extends ActionBarActivity {
 			final Intent intent = new Intent();
 			intent.setClass(SearchActivity.this, ShowResultActivity.class);
 
-			final Date date = new Date(2014 - 1900, 7 - 1, 29);
+			final Date date = new Date(2014 - 1900, 7 - 1, 31);
 			final String from = "SHH";
 			final String to = "SZH";
 			final String type = "ADULT";
